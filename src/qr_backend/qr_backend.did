@@ -19,4 +19,6 @@ service :
     {
         "qrcode_query": (input: text, options: Options) -> (QRResult) query;
         "qrcode_update": (input: text, options: Options) -> (QRResult);
+        "greet": (text) -> (text) query;
     }
+
