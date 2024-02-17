@@ -1,0 +1,17 @@
+{
+  "canisters": {
+    "qr_backend": {
+      "candid": "src/qr_backend/qr_backend.did",
+      "package": "qr_backend",
+      "type": "rust"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

@@ -1,0 +1,22 @@
+type Options = record
+    {
+        add_logo: bool;
+        add_gradient: bool;
+        add_transparency: opt bool;
+    };
+
+type QRError = record
+    {
+        message: text;
+    };
+
+type QRResult = variant
+    {
+        Image: blob;
+        Err: QRError;
+    }
+service :
+    {
+        "qrcode_query": (input: text, options: Options) -> (QRResult) query;
+        "qrcode_update": (input: text, options: Options) -> (QRResult);
+    }
